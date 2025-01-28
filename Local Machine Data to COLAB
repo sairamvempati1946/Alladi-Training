@@ -1,0 +1,7 @@
+#import local machine data set into colab notebook
+import pandas as pd
+from google.colab import files
+import io
+uploaded = files.upload()
+df5 = pd.read_csv(io.BytesIO(uploaded['MarketingData.csv']))
+df5
